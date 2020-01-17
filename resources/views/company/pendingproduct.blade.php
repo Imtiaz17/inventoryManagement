@@ -6,9 +6,9 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Product Recieved
-                    <a class="btn btn-primary" style="float:right" href="{{ route('pending') }}">Pedning product</a>
-                    <a class="btn btn-primary" style="float:right" href="{{ route('product.create') }}">Order product</a>
+                    Pending Product
+                    <a class="btn btn-primary" style="float:right" href="{{ route('company.index') }}">Back</a>
+                    {{-- <a class="btn btn-primary" style="float:right" href="{{ route('orderproduct') }}">Supplier product</a> --}}
                 </div>
                 <div class="card-body">
                     <table class="table table-striped">
@@ -16,7 +16,7 @@
                           <tr>
                             <th scope="col">No</th>
                             <th scope="name">Product Name</th>
-                            <th scope="date">Recieved date</th>
+                            <th scope="date">Order date</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -25,7 +25,7 @@
                           <tr>
                             <th scope="col">{{ $count++ }}</th>
                             <th scope="name">{{$product->name}}</th>
-                            <td scope="date">{{date('d-m-Y', strtotime($product->created_at))}}</td>
+                            <td scope="date">{{date('d-m-Y', strtotime($product->order_date))}}</td>
                           </tr>
                           @empty
                           <tr>

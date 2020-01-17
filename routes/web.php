@@ -19,4 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company', 'CompanyController');
+Route::get('pendingproduct', 'CompanyController@pendingProduct')->name('pending');
 Route::resource('supplier', 'SupplierController');
+Route::resource('product', 'ProductController');
