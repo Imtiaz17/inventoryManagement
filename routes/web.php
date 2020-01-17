@@ -21,4 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company', 'CompanyController');
 Route::get('pendingproduct', 'CompanyController@pendingProduct')->name('pending');
 Route::resource('supplier', 'SupplierController');
+Route::patch('/supplyproduct/{product}', 'SupplierController@supplyProduct')->name('supplyproduct');
 Route::resource('product', 'ProductController');
